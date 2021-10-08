@@ -1,0 +1,27 @@
+{
+    "type":"navigation",
+    "navigationTitle":"Hello World!",
+    "views":[
+        {
+        "type": "table",
+        "rows": [
+            {
+                "type": "row",
+                "title": "Hello...",
+                "subtitle": "...from JSON"
+            },
+            {
+                "type": "row",
+                "title": "Hello...",
+                "subtitle": "...from JSON"
+            },
+            {
+                "type": "row",
+                "title": "Hello...",
+                "subtitle": "...from JSON"
+            },
+        ]
+    }
+
+    ]
+}
