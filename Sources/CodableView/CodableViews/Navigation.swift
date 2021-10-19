@@ -8,6 +8,12 @@
 import SwiftUI
 
 /// A view representing navigation.
+///
+/// This view represents a navigation. It conforms to `Codable` and is part of the ``CodableView`` enum.
+///
+/// - Parameters:
+///     - navigationTitle: The main title.
+///     - views: An array of ``CodableView`` to be listed.
 public struct Navigation: View, Codable {
     var navigationTitle: String = ""
     var views: [CodableView]

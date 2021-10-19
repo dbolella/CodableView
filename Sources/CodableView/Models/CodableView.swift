@@ -1,6 +1,22 @@
 import SwiftUI
 
 /// An enum that represents a number of SwiftUI views that can be represented in JSON.
+///
+/// Though SwiftUI is a powerful, declarative UI framework, it also means that our view hierarchies
+/// can become quite complex. Though we can make a view easily conform to `Codable`, it does
+/// not provide the actual context and knowledge of the type of view, itself. Hence, `CodableView`,
+/// which assumes that the type is declared within the JSON structure, itself, providing the context
+/// by which we can then parse out our views.
+///
+/// Here is an example of JSON we can expect:
+///
+/// ```json
+/// {
+/// "type": "row",
+/// "title": "Hello...",
+/// "subtitle": "...from JSON"
+/// }
+/// ```
 public enum CodableView: View, Codable {
     case row(Row)
     case table(Table)

@@ -8,6 +8,13 @@
 import SwiftUI
 
 /// A view representing a row.
+///
+/// This view represents a row that can be used in a ``Table``. It conforms to `Codable` and
+/// is part of the ``CodableView`` enum.
+///
+/// - Parameters:
+///     - title: Main text.
+///     - subtitle: Underlying text.
 public struct Row: View, Codable {
     var id: UUID! = UUID()
     var title: String
@@ -22,6 +29,11 @@ public struct Row: View, Codable {
 }
 
 /// A view representing a table.
+///
+/// This view represents a table. It conforms to `Codable` and is part of the ``CodableView`` enum.
+///
+/// - Parameters:
+///     - rows: This takes an array of ``CodableView``, though we assume them to be of type ``Row``.
 public struct Table: View, Codable {
     var rows: [CodableView]
     
