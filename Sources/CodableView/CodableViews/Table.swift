@@ -7,12 +7,13 @@
 
 import SwiftUI
 
-struct Row: View, Codable {
+/// A view representing a row.
+public struct Row: View, Codable {
     var id: UUID! = UUID()
     var title: String
     var subtitle: String
     
-    var body: some View {
+    public var body: some View {
         VStack(alignment: .leading) {
             Text(title)
             Text(subtitle)
@@ -20,10 +21,11 @@ struct Row: View, Codable {
     }
 }
 
-struct Table: View, Codable {
+/// A view representing a table.
+public struct Table: View, Codable {
     var rows: [CodableView]
     
-    var body: some View {
+    public var body: some View {
         List(rows) { view in
             view
         }

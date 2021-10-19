@@ -1,6 +1,7 @@
 import SwiftUI
 
-enum CodableView: View, Codable {
+/// An enum that represents a number of SwiftUI views that can be represented in JSON.
+public enum CodableView: View, Codable {
     case row(Row)
     case table(Table)
     case navigation(Navigation)
@@ -10,7 +11,7 @@ enum CodableView: View, Codable {
         case type
     }
 
-    init(from decoder: Decoder) throws {
+    public init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         let type = try container.decode(String.self, forKey: .type)
 
@@ -29,7 +30,7 @@ enum CodableView: View, Codable {
         }
     }
     
-    func encode(to encoder: Encoder) throws {
+    public func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
 
         switch self {
@@ -48,7 +49,7 @@ enum CodableView: View, Codable {
     }
     
     @ViewBuilder
-    var body: some View {
+    public var body: some View {
         switch self {
         case .row(let rowView):
             AnyView(rowView)
@@ -72,7 +73,7 @@ enum CodableView: View, Codable {
 }
 
 extension CodableView: Identifiable {
-    var id: ObjectIdentifier {
+    public var id: ObjectIdentifier {
         ObjectIdentifier(CodableView.self)
     }
 }

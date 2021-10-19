@@ -7,11 +7,12 @@
 
 import SwiftUI
 
-struct Navigation: View, Codable {
+/// A view representing navigation.
+public struct Navigation: View, Codable {
     var navigationTitle: String = ""
     var views: [CodableView]
     
-    var body: some View {
+    public var body: some View {
         NavigationView {
             List(views) { view in
                 view

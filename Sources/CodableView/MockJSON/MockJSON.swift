@@ -7,7 +7,8 @@
 
 import Foundation
 
-enum MockJSON: String {
+/// An enum that represents types of `CodableViews` to retrieve mock JSON for that view.
+public enum MockJSON: String {
     case row = "Row", table = "Table", navigation = "navigation"
     
     func getJSON() -> Data{
