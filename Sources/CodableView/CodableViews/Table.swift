@@ -33,7 +33,7 @@ struct Table: View, Codable {
 struct Table_Previews: PreviewProvider {
     static var previews: some View {
         let decoder = JSONDecoder()
-        let decodedView = try! decoder.decode(CodableView.self, from: json)
+        let decodedView = try! decoder.decode(CodableView.self, from: MockJSON.row.getJSON())
         
         // Row
         decodedView

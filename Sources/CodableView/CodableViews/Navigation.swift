@@ -24,7 +24,7 @@ struct Navigation: View, Codable {
 struct Navigation_Previews: PreviewProvider {
     static var previews: some View {
         let decoder = JSONDecoder()
-        let decodedView = try! decoder.decode(CodableView.self, from: jsonTable)
+        let decodedView = try! decoder.decode(CodableView.self, from: MockJSON.navigation.getJSON())
         
         Navigation(navigationTitle: "Hello World!", views: [decodedView])
     }

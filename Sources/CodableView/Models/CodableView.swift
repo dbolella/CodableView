@@ -1,6 +1,5 @@
 import SwiftUI
 
-@available(macOS 10.15, *)
 enum CodableView: View, Codable {
     case row(Row)
     case table(Table)
@@ -72,7 +71,6 @@ enum CodableView: View, Codable {
     }
 }
 
-@available(macOS 10.15, *)
 extension CodableView: Identifiable {
     var id: ObjectIdentifier {
         ObjectIdentifier(CodableView.self)
@@ -80,7 +78,6 @@ extension CodableView: Identifiable {
 }
 
 struct CodableView_Previews: PreviewProvider {
-    @available(macOS 10.15.0, *)
     static var previews: some View {
         let sampleJSON = MockJSON.row.getJSON()
         let decoder = JSONDecoder()
