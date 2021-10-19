@@ -1,6 +1,6 @@
 # CodableView
 
-A description of this package.
+Library of Swiftui Views conforming to Codable, meaning we can produce JSON driven UI!
 
 ## Adding a CodableView Type
 1. Create View that conforms to Codable in the CodableViews folder
